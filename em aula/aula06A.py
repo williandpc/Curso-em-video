@@ -1,0 +1,6 @@
+x = input('digite um numero:')
+y = int(input('digite outro:'))
+print(type(x))
+x = int(x)
+print(type(x))
+print(f'A soma entre {x} e {y} vale {x + y}')
