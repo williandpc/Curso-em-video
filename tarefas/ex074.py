@@ -4,5 +4,5 @@
 import random
 num = int()
 c = 1
-num.((random.randrange(6)))
+num.__add__((random.randrange(6)))
 print(num)
