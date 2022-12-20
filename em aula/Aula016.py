@@ -3,4 +3,4 @@ for c in lanche:
     print(c)
 
 # tuplas nao podem ter seus elementos alterados
-#{icognita}.count(elemento procurado)_
+#{icognita}.count(elemento procurado)
