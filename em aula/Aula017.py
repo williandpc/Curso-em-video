@@ -29,4 +29,4 @@ for indice, valor in enumerate(lista):
     se igualar listas como: *lista copia* = *lista original*, todas as alterações em uma lista sera aplicada na outra lista;
     para simplesmente criar uma copia da lista e nao alterar a lista origianl futuramente, 
     temos que adicionar da seguinte forma: *lista copia* = *lista original*[:]. Assim as duas listas nao tem mais ligação
-     #função list faz uma listagem
+     #função list faz uma listagem"""
