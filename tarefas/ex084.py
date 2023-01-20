@@ -32,4 +32,3 @@ print(f'Dentre essas pessoas, o maior peso cadastrado foi {maior}kg dessas pesso
 for pessoa in galera:
     if pessoa[1] == maior:
         print(pessoa[0], end=' ')
-
