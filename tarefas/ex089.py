@@ -6,7 +6,7 @@
 
 boletim = [[], [], []]
 while True:
-    boletim[0].append(input('Nome: '))
+    boletim[0].append(input('Nome: ').capitalize())
     boletim[1].append(float(input('Nota P1: ')))
     boletim[2].append(float(input('Nota P2: ')))
     cc = (input('Deseja continuar cadastrando alunos[S/N]? '))
@@ -20,21 +20,27 @@ print(f'NOME'.ljust(10), end='')
 print(f'MÉDIA'.ljust(4))
 print('-'*19)
 for i in range(0, len(boletim[0])):
-    print(f'{i:<4}{boletim[0][i]:<20}{((boletim[1][i] + boletim[2][i]) / 2).__round__(1) :>4}')
-print('='*19)
+    print(f'{i:<4}{boletim[0][i]:<10}{((boletim[1][i] + boletim[2][i]) / 2).__round__(1) :>4}')
 while True:
+    print('=' * 19)
     n = input("""De quem você gostaria de ver as notas brutas? 
-Digite o seu numero da lista ou o seu nome. [9999 interrompe]. """).lower()
-    if int(n) == 9999:
+Digite o seu numero da lista ou o seu nome. 
+[9999 interrompe]. """).capitalize()
+    if n.isnumeric() and n == 9999:
         break
     else:
         if n.isnumeric():
+            n = int(n)
+            print('-' * 19)
             print(f'As notas de {boletim[0][n]} separadamente são: '
                   f'{boletim[1][n]} e {boletim[2][n]}.')
+            print('-' * 19)
         else:
             ia = boletim[0].index(n)
-            print(f'As notas de {(boletim[0][ia])}'
-                  f'separadamente são: {boletim[1][ia]} e {boletim[2][ia]}.')
-    print('=' * 19)
+            print('-' * 19)
+            print(f'As notas de {(boletim[0][ia])} separadamente são: '
+                  f'{boletim[1][ia]} e {boletim[2][ia]}.')
+            print('-' * 19)
+print('=' * 19)
 print(f'FINALIZANDO.....')
 print(f'Muito obrigado!! Estou disponivel para mais consulta!!!')
