@@ -26,8 +26,8 @@ print()
 print('-=-'*30)
 for i, player in enumerate(time):
     print(f'{i:>5}', end='  ')
-    for k, v in player.items():
-        print(f'{v}', end='')
+    for v in player:
+        print(f'{v:>10}', end='')
     print()
 print('-=-'*30)
 #    print(f'O jogador {jogador["nome"]} jogou {jogos}.')
