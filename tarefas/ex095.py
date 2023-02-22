@@ -25,12 +25,15 @@ for key, value in jogador.items():
 print()
 print('-=-'*30)
 for i, player in enumerate(time):
-    print(f'{i:>5}', end='  ')
+    print(f'{i:>5}', end='')
     for k, v in player.items():
-        print(f'{v}', end='')
+        print(f'{str(v):>10}', end='')
     print()
 print('-=-'*30)
-#    print(f'O jogador {jogador["nome"]} jogou {jogos}.')
-#for j, g in enumerate(jogador["gols"]):
-#    print(f'    => Na partida {j + 1}, fez {g} gols.')
-#print(f'O total foi de {jogador["totals"]} gols')
+while True:
+    status = int(input("Mostrar dados de qual jogador? [999 para cancelar] "))
+    if status == 999:
+        break
+    print(f'Levantamento do jogador {time[status]["nome"].upper()}:')
+    for i, v in enumerate(time[status]["gols"]):
+        print(f"    => No jogo {i + 1} fez {v} gol(s)")
