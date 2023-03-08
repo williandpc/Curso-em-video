@@ -1,13 +1,11 @@
-from datetime import datetime
-
-
 def voto(ano):
+    from datetime import datetime
     idade = datetime.today().year - ano
-    if idade < 18:
+    if idade < 16:
         print(f"Com {idade} anos: NÃO VOTA.")
-    elif 18 < idade < 65:
+    elif 16 < idade < 65:
         print(f"com {idade} anos: VOTO OBRIGATÓRIO.")
-    elif idade >= 65:
+    elif idade >= 65 or 16 <= idade < 18:
         print(f"com {idade} anos: VOTO OPCIONAL.")
 
 

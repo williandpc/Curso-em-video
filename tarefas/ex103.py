@@ -1,5 +1,9 @@
-def ficha(jogador='<Desconhecido>', gols=0):
+def ficha(jogador='<Desconhecido>', gols='0'):
+    if gols.isnumeric():
+        gols = int(gols)
+    else:
+        gols = 0
     print(f'O jogador {jogador} fez {gols} gol(s) no campeonato.')
 
 
-ficha(input("Nome do jogador: "), int(input("Número de gols: ")))
+ficha(jogador=str(input("Nome do jogador: ").lstrip()), gols=input("Número de gols: "))
