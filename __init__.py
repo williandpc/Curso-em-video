@@ -1,4 +1,4 @@
-import random
+"""import random
 
 parent = [-1, 0, 1, 2]
 parent2 = parent[:]
@@ -13,3 +13,4 @@ print(parent2)
 print(dicionario)
 for v, i in enumerate(parent):
 
+"""

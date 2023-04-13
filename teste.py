@@ -1,4 +1,4 @@
-#!/bin/python3
+"""#!/bin/python3
 
 import math
 import os
@@ -19,7 +19,7 @@ import sys
 def mostBalancedPartition(parent, files_size):
 
 
-# Write your code here /// fazer ele retornar a diferença absoluta entre 2 arvores de dados.
+# Write your code here /// fazer ele retornar a diferenï¿½a absoluta entre 2 arvores de dados.
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
@@ -44,3 +44,4 @@ if __name__ == '__main__':
     fptr.write(str(result) + '\n')
 
     fptr.close()
+"""

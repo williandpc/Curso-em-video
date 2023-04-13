@@ -48,7 +48,7 @@ def resumo(v, a, d):
                   "Dobro do preço:": dobro(v, True),
                   "Metade do preço:": metade(v, True),
                   f"{a}% de aumento:": aumentar(v, a, True),
-                  f"{d}% de aumento:": diminuir(v, d, True)}
+                  f"{d}% de redução:": diminuir(v, d, True)}
     for v, k in dicionario.items():
         print(f"{v:<20}", end='')
         print(f"{k}")
