@@ -11,6 +11,7 @@ def leiaint(msg):
         else:
             return n
 
+
 def leiafloat(msg):
     while True:
         try:
@@ -24,7 +25,7 @@ def leiafloat(msg):
         else:
             return n
 
+
 num = leiaint('Digite um valor: ')
 r = leiafloat("Digite um valor: ")
 print(f"O valor inteiro digitado foi {num} e o valor real digitado foi {r} ")
-
