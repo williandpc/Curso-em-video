@@ -5,4 +5,4 @@ def listar():
                 return print("Arquivo vazio, cadastre uma nova pessoa")
             else:
                 return print(tabela)
-
+,

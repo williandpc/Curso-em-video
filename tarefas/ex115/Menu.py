@@ -17,3 +17,4 @@ while True:
     else:
         print('\033[31mERRO! Digite uma opção válida!\033[m')
     sleep(1)
+,
