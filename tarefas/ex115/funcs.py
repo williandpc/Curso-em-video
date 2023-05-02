@@ -1,3 +1,6 @@
+from time import sleep
+
+
 def leiaint(msg):
     while True:
         try:
@@ -30,4 +33,18 @@ def menu(lista):
     print()
     print(linha())
     opt = leiaint('\033[33mSua Opção: \033[m')
+    print()
     return opt
+
+
+def abrirlist():
+    try:
+        with open('registro.txt', 'r') as registro:
+            print('Registro encontrado e aberto com sucesso!')
+            return registro
+    except FileNotFoundError:
+        with open('registro.txt', 'w') as registro:
+            print('Registro, não encontrado! Gerando um novo registro...')
+            sleep(1)
+            print("Registro gerado com sucesso!")
+            return registro
