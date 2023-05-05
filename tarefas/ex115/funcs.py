@@ -48,4 +48,3 @@ def abrirlist():
             sleep(1)
             print("Registro gerado com sucesso!")
             return registro
-,
