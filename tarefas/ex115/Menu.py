@@ -1,7 +1,5 @@
 from funcs import *
-from listar import *
-from time import sleep
-from cadastro import cadastro
+from manip_dados import *
 
 abrirlist()
 
@@ -13,9 +11,11 @@ while True:
         break
 
     elif escolha == 2:
+        cabecalho("NOVO CADASTRO")
         cadastro(input("\033[33mNome: \033[m"), int(input("\033[33mIdade: \033[m")))
 
     elif escolha == 1:
+        cabecalho("PESSOAS CADASTRADAS")
         listar()
 
     else:

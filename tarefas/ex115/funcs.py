@@ -10,7 +10,7 @@ def leiaint(msg):
             continue
         except KeyboardInterrupt:
             print("\033[31mEntrada de dados interrompida pelo usuário.\033[m")
-            continue
+            break
         else:
             return n
 
@@ -35,16 +35,3 @@ def menu(lista):
     opt = leiaint('\033[33mSua Opção: \033[m')
     print()
     return opt
-
-
-def abrirlist():
-    try:
-        with open('registro.txt', 'r') as registro:
-            print('Registro encontrado e aberto com sucesso!')
-            return registro
-    except FileNotFoundError:
-        with open('registro.txt', 'w') as registro:
-            print('Registro, não encontrado! Gerando um novo registro...')
-            sleep(1)
-            print("Registro gerado com sucesso!")
-            return registro
