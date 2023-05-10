@@ -4,7 +4,7 @@ from funcs import *
 def cadastro(nome=str, idade=int):
     try:
         with open("registro.txt", 'a') as registro:
-            registro.writelines(f"{nome}; {idade}")
+            registro.writelines(f"{nome.title()}; {idade}\n")
     except:
         print("Ocorreu um erro")
     else:
@@ -30,4 +30,7 @@ def listar():
         if tabela == '':
             return print("Arquivo vazio, cadastre uma nova pessoa")
         else:
-            return print(tabela[1])
+            for pessoa in tabela:
+                nome = pessoa.split(';')[0]
+                idade = pessoa.split(';')[1].replace('\n', '')
+                print(f"{nome:<33} {idade} anos")
